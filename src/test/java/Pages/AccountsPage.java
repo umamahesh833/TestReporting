@@ -17,7 +17,7 @@ public class AccountsPage {
 		
 		if(eleAccounts.getText()=="My Account") {
 			
-			
+			//Mahesh
 			AuthenticationTests.reporter.LogStepPass("Logged in successfully");
 		}else {
 			AuthenticationTests.reporter.LogStepFail("Logged in successfully");
