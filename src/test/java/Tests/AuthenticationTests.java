@@ -68,5 +68,17 @@ public class AuthenticationTests {
 		PageAccount.fnVerifyLogin();
 		ObjBase.fnCloseBrowser();
 	}
+	
+	@Test(priority=4)
+	public void LogOutTest() throws Exception {
+		
+		reporter.CreateTest("Login Test");
+		
+		ObjBase.fnlaunchBrowser();
+		ObjBase.fnNavigateTo("https://naveenautomationlabs.com/opencart/");
+		PageLogin.fnLoginuser("jastisaikumar2020@gmail.com");
+		PageAccount.fnVerifyLogin();
+		ObjBase.fnCloseBrowser();
+	}
 
 }
