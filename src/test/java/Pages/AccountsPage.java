@@ -16,6 +16,8 @@ public class AccountsPage {
 		WebElement eleAccounts = Base.driver.findElement(By.xpath("//div[@id='content']/h2"));
 		
 		if(eleAccounts.getText()=="My Account") {
+			
+			
 			AuthenticationTests.reporter.LogStepPass("Logged in successfully");
 		}else {
 			AuthenticationTests.reporter.LogStepFail("Logged in successfully");
