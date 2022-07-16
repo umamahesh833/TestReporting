@@ -6,45 +6,61 @@ import org.openqa.selenium.WebElement;
 import DriverUtil.Base;
 
 public class UserRegisterpage {
+	
+	By MyAccountElement = By.xpath("/html/body/nav/div/div[2]/ul/li[2]/a/span[1]");
+	By RegisterElement = By.linkText("Register");
+	By Firstnameelement =By.id("input-firstname");
+	By Lastnameelement =By.id("input-lastname");
+	By emailelement =By.xpath("//input[@id='input-email']");
+	By telephoneelement=By.id("input-telephone");
+	By elepassword=By.id("input-password");
+	By elementconfirmpassword=By.id("input-confirm");
+	By elementsubcribe=By.xpath("/html/body/div[2]/div/div/form/fieldset[3]/div/div/label[2]/input");
+	By elementprivacy=By.xpath("/html/body/div[2]/div/div/form/div/div/input[1]");
+	By elementcontinubtn=By.xpath("/html/body/div[2]/div/div/form/div/div/input[2]");
+	
+
+
 
 	
 	public void fnUserRegister(String sEmailID) {
 		
 	
-		WebElement ele = Base.driver.findElement(By.xpath("/html/body/nav/div/div[2]/ul/li[2]/a/span[1]"));		
-		ele.click();
-		WebElement ele1 = Base.driver.findElement(By.linkText("Register"));
-		ele1.click();
-		WebElement ele2 = Base.driver.findElement(By.id("input-firstname"));
-		ele2.sendKeys("sai12");
+		WebElement eleaccount = Base.driver.findElement(MyAccountElement);		
+		eleaccount.click();
+		WebElement eleregister = Base.driver.findElement(MyAccountElement);
+
+		eleregister.click();
+		WebElement elefirstname = Base.driver.findElement(Firstnameelement);
+		elefirstname.sendKeys("sai12");
 		
-		WebElement ele3 = Base.driver.findElement(By.id("input-lastname"));
-		ele3.sendKeys("jastisai12");
-		
-		
-		WebElement ele4 = Base.driver.findElement(By.xpath("//input[@id='input-email']"));
-		ele4.sendKeys(sEmailID);
-		
-		WebElement ele5 = Base.driver.findElement(By.id("input-telephone"));
-		ele5.sendKeys("9676245585");	
-		
-		WebElement ele6 = Base.driver.findElement(By.id("input-password"));
-		ele6.sendKeys("Saibaba");
+		WebElement elelastname = Base.driver.findElement(Lastnameelement);
+		elelastname.sendKeys("jastisai12");
 		
 		
-		WebElement ele7 = Base.driver.findElement(By.id("input-confirm"));
-		ele7.sendKeys("Saibaba");
+		WebElement eleemail = Base.driver.findElement(emailelement);
+		eleemail.sendKeys(sEmailID);
 		
-		WebElement ele8 = Base.driver.findElement(By.xpath("/html/body/div[2]/div/div/form/fieldset[3]/div/div/label[2]/input"));
-		ele8.click();
+		WebElement eletelephone = Base.driver.findElement(telephoneelement);
+		eletelephone.sendKeys("9676245585");	
+		
+		WebElement elementpassword = Base.driver.findElement(elepassword);
+		elementpassword.sendKeys("Saibaba");
+		
+		
+		WebElement elepassconfirm = Base.driver.findElement(elementconfirmpassword);
+		elepassconfirm.sendKeys("Saibaba");
+		
+		WebElement elesubscribe = Base.driver.findElement(elementsubcribe);
+		elesubscribe.click();
 		
 
-		WebElement ele9 = Base.driver.findElement(By.xpath("/html/body/div[2]/div/div/form/div/div/input[1]"));
-		ele9.click();
+		WebElement eleprivacy = Base.driver.findElement(elementprivacy);
+		eleprivacy.click();
 		
 
-		WebElement ele10 = Base.driver.findElement(By.xpath("/html/body/div[2]/div/div/form/div/div/input[2]"));
-		ele10.click();
+		WebElement elecontinuebtn = Base.driver.findElement(elementcontinubtn);
+		elecontinuebtn.click();
 	}
 		
 		

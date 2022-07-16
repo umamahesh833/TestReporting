@@ -22,8 +22,9 @@ public class Base {
 	
 	
 	public void fnlaunchBrowser() {
-		System.setProperty("webdriver.chrome.driver", "C:\\ChromeDriver\\chromedriver.exe");		
-		driver =  new ChromeDriver();
+		System.setProperty("webdriver.gecko.driver","C:\\selenium\\geckodriver.exe");
+	
+		driver =  new FirefoxDriver();
 		driver.manage().window().maximize();
 		AuthenticationTests.reporter.LogStepDone("Browser Launched");
 		//Implicit wait

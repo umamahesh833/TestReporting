@@ -15,6 +15,10 @@ public class LoginPage {
 	
 	By MyAccountElement = By.xpath("/html/body/nav/div/div[2]/ul/li[2]/a/span[1]");
 	By LoginElement = By.linkText("Login");
+	By emailElement = By.xpath("//*[@id=\"input-email\"]");
+	By passwordelement= By.xpath("//*[@id=\"input-password\"]");
+	By loginbuttonelement= By.xpath("/html/body/div[2]/div/div/div/div[2]/div/form/input");
+
 	
 	public void fnLoginuser(String sEmailID) {
 		
@@ -29,18 +33,18 @@ public class LoginPage {
 		
 		AuthenticationTests.reporter.LogStepFail("Logged in successfully");
 		
-		WebElement ele2 = Base.driver.findElement(By.xpath("//*[@id=\"input-email\"]"));		
-		ele2.sendKeys(sEmailID);
+		WebElement emailEle = Base.driver.findElement(emailElement);		
+		emailEle.sendKeys(sEmailID);
 		AuthenticationTests.reporter.LogStepFail("Logged in successfully");
 		
-		WebElement ele3 = Base.driver.findElement(By.xpath("//*[@id=\"input-password\"]"));		
-		ele3.sendKeys("Saibaba");
+		WebElement elepassword = Base.driver.findElement(passwordelement);		
+		elepassword.sendKeys("Saibaba");
 		
 		
-		WebElement ele4 = Base.driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div[2]/div/form/input"));
+		WebElement loginbutton = Base.driver.findElement(loginbuttonelement);
 		
 		
-		ele4.click();
+		loginbutton.click();
 		
 	}
 

@@ -39,6 +39,7 @@ public class AuthenticationTests {
 		reporter.CreateTest("User Registeration");
 		
 		ObjBase.fnlaunchBrowser();
+		
 		ObjBase.fnNavigateTo("https://naveenautomationlabs.com/opencart/");
 		PageUserReg.fnUserRegister("jastisaikumar2020@gmail.com");
 		PageCreation.fnVerifyAccountCreation();
@@ -63,9 +64,12 @@ public class AuthenticationTests {
 		reporter.CreateTest("Login Test");
 		
 		ObjBase.fnlaunchBrowser();
+		
 		ObjBase.fnNavigateTo("https://naveenautomationlabs.com/opencart/");
 		PageLogin.fnLoginuser("jastisaikumar2020@gmail.com");
 		PageAccount.fnVerifyLogin();
+		
+		
 		ObjBase.fnCloseBrowser();
 	}
 	
