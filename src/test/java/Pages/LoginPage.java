@@ -8,14 +8,25 @@ import Reporting.ReportWriter;
 import Tests.AuthenticationTests;
 
 public class LoginPage {
+	
+	
+	
 	ReportWriter Report = new ReportWriter();
 	
+	By MyAccountElement = By.xpath("/html/body/nav/div/div[2]/ul/li[2]/a/span[1]");
+	By LoginElement = By.linkText("Login");
+	
 	public void fnLoginuser(String sEmailID) {
-		WebElement ele = Base.driver.findElement(By.xpath("/html/body/nav/div/div[2]/ul/li[2]/a/span[1]"));		
-		ele.click();
+		
+		WebElement eleMyAccount = Base.driver.findElement(MyAccountElement);		
+		eleMyAccount.click();		
 		AuthenticationTests.reporter.LogStepFail("Logged in successfully");
-		WebElement ele1 = Base.driver.findElement(By.linkText("Login"));
-		ele1.click();
+		
+		//Clicking on Login link
+		WebElement Login = Base.driver.findElement(LoginElement);
+		Login.click();
+		
+		
 		AuthenticationTests.reporter.LogStepFail("Logged in successfully");
 		
 		WebElement ele2 = Base.driver.findElement(By.xpath("//*[@id=\"input-email\"]"));		
